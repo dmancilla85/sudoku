@@ -73,4 +73,53 @@ public class Sudoku {
 		return cuadrantesAux[x][y];
 	}
 	
+	public static bool sudokuValido(int digitos, MatrizTDA<Integer> tablero) {
+		
+		List<Integer> 	secVer = new List<Integer>; 
+		List<Integer> 	secHor = new List<Integer>; 
+		boolean 		valido = true;   
+
+		int celdas = Math.sqrt(digitos);
+		
+		for(int i = 0; i < digitos - 1; i++) {
+			int ini = i * celdas;
+			int fin = ini + celdas - 1;
+			
+			// Filas del cuadrante
+			for(int ix = ini; ix < fin; ix++) {
+				int ini_col = ix * celdas; 
+				int fin_col = ini_col + (celdas - 1);
+				
+				for(int iy = ini_col; iy < fin_col; iy++){
+				/*        
+				si M[ix, iy] está en secVer
+				                    valido -- falso
+				                sino
+				                    secVer -- secVer + M[ix, iy]  
+				                fin si
+				 */		
+				}
+			}
+			
+			// Columnas del cuadrante
+			for(int ix = ini; ix < fin; ix++) {
+					int ini_col = ix * celdas; 
+					int fin_col = ini_col + (celdas - 1);
+							
+					for(int iy = ini_col; iy < fin_col; iy++){
+					/*        
+					si M[ix, iy] está en secVer
+					                    valido -- falso
+					                sino
+					                    secVer -- secVer + M[ix, iy]  
+					                fin si*/		
+					}
+			}
+					
+		}
+		
+	}
+
+
+	
 }
